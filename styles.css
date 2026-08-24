@@ -1,0 +1,37 @@
+:root{
+  --bg:#f7f7f5;
+  --text:#111111;
+  --muted:#6f6f6a;
+  --line:#deded8;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Inter,system-ui,sans-serif;
+  color:var(--text);
+  background:var(--bg);
+}
+.container{max-width:1100px;margin:0 auto;padding:0 20px}
+.topbar{border-bottom:1px solid var(--line);background:#fff}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:16px 0;gap:16px}
+.logo-main{font-family:"Playfair Display",serif;font-size:24px;letter-spacing:.08em;display:block}
+.logo-sub{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.15em}
+nav a{margin:0 10px;color:var(--text);text-decoration:none}
+.lang-btn{border:1px solid var(--line);background:#fff;padding:8px 12px;cursor:pointer}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;padding:60px 20px}
+.eyebrow{text-transform:uppercase;letter-spacing:.2em;font-size:12px;color:var(--muted)}
+h1,h2,h3{font-family:"Playfair Display",serif}
+h1{font-size:42px;line-height:1.2;margin:10px 0 12px}
+.lead{color:var(--muted);max-width:50ch}
+.hero-card img{width:100%;border-radius:10px;border:1px solid var(--line)}
+.cta-row{display:flex;gap:12px;margin-top:22px;flex-wrap:wrap}
+.btn{
+  display:inline-block;padding:11px 16px;border:1px solid #111;background:#111;color:#fff;text-decoration:none;cursor:pointer
+}
+.btn-ghost{background:transparent;color:#111}
+.section{padding:40px 20px;border-top:1px solid var(--line)}
+.product-card{border:1px solid var(--line);padding:20px;border-radius:10px;background:#fff}
+.form{display:grid;gap:10px;max-width:600px}
+input,textarea{padding:11px;border:1px solid var(--line);font:inherit;background:#fff}
+.footer{border-top:1px solid var(--line);padding:20px 0;margin-top:30px}
+@media (max-width:900px){.hero{grid-template-columns:1fr}}

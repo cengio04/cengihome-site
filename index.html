@@ -3,71 +3,105 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Cengihome — Minimal Objects</title>
-  <meta name="description" content="Cengihome: oggetti d’arredo minimal stampati in 3D. Collezione Opera Prima." />
+  <title>Cengihome — Ultra Luxury Minimal Objects</title>
+  <meta name="description" content="Cengihome: oggetti d’arredo ultra minimal e lussuosi, stampati in 3D. Collezione Opera Prima." />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <div class="grain"></div>
+
   <header class="topbar">
     <div class="container nav">
-      <div class="logo">
+      <a href="#home" class="logo-wrap" aria-label="Cengihome home">
         <span class="logo-main">CENGIHOME</span>
         <span class="logo-sub">Objects for Living</span>
-      </div>
-      <nav>
+      </a>
+
+      <nav class="desktop-nav">
         <a href="#home" data-i18n="nav_home">Home</a>
         <a href="#collection" data-i18n="nav_collection">Collezione</a>
         <a href="#custom" data-i18n="nav_custom">Personalizzazione</a>
         <a href="#contact" data-i18n="nav_contact">Contatti</a>
       </nav>
-      <button id="langToggle" class="lang-btn">EN</button>
+
+      <button id="langToggle" class="lang-btn" aria-label="Switch language">EN</button>
     </div>
   </header>
 
   <main id="home">
-    <section class="hero container">
-      <div>
-        <p class="eyebrow">Made in Italy</p>
-        <h1 data-i18n="hero_title">Oggetti d’arredo minimal, stampati in 3D con cura artigianale.</h1>
-        <p class="lead" data-i18n="hero_text">Design essenziale, anima materica, presenza scultorea.</p>
+    <section class="hero container reveal">
+      <div class="hero-copy">
+        <p class="eyebrow">Made in Italy · 3D Crafted</p>
+        <h1 data-i18n="hero_title">Forme essenziali per interni contemporanei.</h1>
+        <p class="lead" data-i18n="hero_text">Oggetti scultorei dal carattere minimal, realizzati con precisione artigianale.</p>
         <div class="cta-row">
-          <a class="btn" href="#collection" data-i18n="hero_cta_1">Scopri Opera Prima</a>
+          <a class="btn btn-gold" href="#collection" data-i18n="hero_cta_1">Scopri Opera Prima</a>
           <a class="btn btn-ghost" href="#custom" data-i18n="hero_cta_2">Richiedi personalizzazione</a>
         </div>
       </div>
-      <div class="hero-card">
-        <img src="assets/opera-prima.jpg" alt="Opera Prima vase set" />
+
+      <div class="hero-media">
+        <div class="media-frame">
+          <img src="assets/opera-prima.jpg" alt="Set vasi Opera Prima di Cengihome" />
+        </div>
       </div>
     </section>
 
-    <section id="collection" class="container section">
-      <h2 data-i18n="col_title">Opera Prima</h2>
-      <p data-i18n="col_text">La nostra prima collezione: tre vasi ispirati al movimento ondulatorio.</p>
-      <div class="product-card">
-        <h3>Opera Prima — Set di Vasi (3 pezzi)</h3>
-        <p data-i18n="prod_desc">Tre vasi dal profilo ondulato, estetica minimal e presenza scultorea.</p>
-        <p><strong>€129,00</strong></p>
-        <a class="btn" href="mailto:lorenzodibi04@gmail.com?subject=Acquisto%20Opera%20Prima">Acquista / Buy</a>
+    <section class="quote reveal">
+      <div class="container quote-inner">
+        <p data-i18n="quote_text">“La materia incontra il silenzio delle forme.”</p>
       </div>
     </section>
 
-    <section id="custom" class="container section">
-      <h2 data-i18n="custom_title">Personalizza il tuo oggetto</h2>
-      <p data-i18n="custom_text">Richiedi dimensioni, colore, finitura o un nuovo concept.</p>
+    <section id="collection" class="container section reveal">
+      <div class="section-head">
+        <p class="kicker">Collection 01</p>
+        <h2 data-i18n="col_title">Opera Prima</h2>
+      </div>
+
+      <p class="section-text" data-i18n="col_text">
+        La collezione inaugurale: tre vasi ispirati al movimento ondulatorio, pensati per dialogare tra loro o vivere singolarmente.
+      </p>
+
+      <article class="product-card">
+        <div class="product-meta">
+          <h3>Opera Prima — Set di Vasi (3 pezzi)</h3>
+          <p data-i18n="prod_desc">Tre volumi con texture continua e proporzioni armoniche, per ambienti moderni e raffinati.</p>
+        </div>
+        <div class="product-buy">
+          <p class="price">129 €</p>
+          <a class="btn btn-gold" href="mailto:lorenzodibi04@gmail.com?subject=Disponibilit%C3%A0%20Opera%20Prima" data-i18n="buy_btn">Richiedi disponibilità</a>
+        </div>
+      </article>
+    </section>
+
+    <section id="custom" class="container section reveal">
+      <div class="section-head">
+        <p class="kicker">Bespoke</p>
+        <h2 data-i18n="custom_title">Personalizza il tuo oggetto</h2>
+      </div>
+
+      <p class="section-text" data-i18n="custom_text">Dimensioni, colore, finitura o concept esclusivo: raccontaci la tua idea.</p>
+
       <form class="form" action="mailto:lorenzodibi04@gmail.com" method="post" enctype="text/plain">
         <input name="name" placeholder="Nome / Name" required />
         <input name="email" type="email" placeholder="Email" required />
         <input name="base_product" placeholder="Prodotto di partenza / Base product" />
-        <textarea name="notes" rows="5" placeholder="Descrivi la tua richiesta / Describe your request"></textarea>
-        <button class="btn" type="submit" data-i18n="form_send">Invia richiesta</button>
+        <textarea name="notes" rows="6" placeholder="Descrivi la tua richiesta / Describe your request"></textarea>
+        <button class="btn btn-gold" type="submit" data-i18n="form_send">Invia richiesta</button>
       </form>
     </section>
 
-    <section id="contact" class="container section">
-      <h2 data-i18n="contact_title">Contatti</h2>
+    <section id="contact" class="container section reveal">
+      <div class="section-head">
+        <p class="kicker">Contact</p>
+        <h2 data-i18n="contact_title">Contatti</h2>
+      </div>
       <p>Email: <a href="mailto:lorenzodibi04@gmail.com">lorenzodibi04@gmail.com</a></p>
       <p>Instagram: @cengihome</p>
       <p data-i18n="shipping">Spedizioni internazionali • International shipping</p>
@@ -75,8 +109,9 @@
   </main>
 
   <footer class="footer">
-    <div class="container">
+    <div class="container footer-inner">
       <p>© <span id="year"></span> Cengihome — Made in Italy</p>
+      <p class="footer-small">Minimal Objects · Luxury Aesthetic</p>
     </div>
   </footer>
 
